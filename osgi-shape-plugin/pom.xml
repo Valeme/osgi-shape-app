@@ -8,9 +8,39 @@
         <groupId>com.osgi.shape</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <packaging>bundle</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>osgi-shape-plugin</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.osgi.shape</groupId>
+            <artifactId>osgi-shape</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Import-Package>com.osgi.shape.comp</Import-Package>
+                        <Export-Package>com.osgi.shape.comp.impl</Export-Package>
+                        <Bundle-Activator>com.osgi.shape.impl.Activator
+                        </Bundle-Activator>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

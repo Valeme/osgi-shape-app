@@ -13,8 +13,6 @@
 .idea/**/dataSources.local.xml
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
-
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries
@@ -50,8 +48,6 @@ crashlytics-build.properties
 fabric.properties
 ### Java template
 # Compiled class file
-*.class
-
 # Log file
 *.log
 
@@ -74,9 +70,7 @@ hs_err_pid*
 
 .idea/
 osgi-shape-plugin/osgi-shape-plugin.iml
-osgi-shape-plugin/src/
 osgi-shape/osgi-shape.iml
-osgi-shape/src/
 
 ### Maven template
 target/
@@ -88,11 +82,3 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-
-# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
-!/.mvn/wrapper/maven-wrapper.jar
-### JetBrains template
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
-# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
-
-# User-specific stuff:
